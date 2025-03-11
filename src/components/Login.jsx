@@ -19,7 +19,7 @@ const Login = () => {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="mb-3 p-2 border border-gray-300 rounded w-full dark:placeholder:text-gray-500"
+          className="mb-3 p-2 border border-gray-300 rounded w-full dark:placeholder:text-gray-500 dark:text-black"
         />
 
         <label className="block text-gray-700">Password</label>
@@ -28,7 +28,7 @@ const Login = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="mb-3 p-2 border border-gray-300 rounded w-full dark:placeholder:text-gray-500"
+            className="mb-3 p-2 border border-gray-300 rounded w-full dark:placeholder:text-gray-500 dark:text-black"
           />
         </div>
 

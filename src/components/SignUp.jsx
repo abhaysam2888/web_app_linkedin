@@ -14,14 +14,14 @@ const SignUp = () => {
           <input
             type="email"
             placeholder="Email or phone"
-            className="p-3 border border-gray-300 rounded-lg focus:outline-none w-full dark:placeholder:text-gray-500"
+            className="p-3 border border-gray-300 rounded-lg focus:outline-none w-full dark:placeholder:text-gray-500 dark:text-black"
           />
         </div>
         <div className="relative mb-4">
           <input
             type="password"
             placeholder="Password"
-            className="p-3 border border-gray-300 rounded-lg focus:outline-none w-full dark:placeholder:text-gray-500"
+            className="p-3 border border-gray-300 rounded-lg focus:outline-none w-full dark:placeholder:text-gray-500 dark:text-black"
           />
         </div>
         <p className="mt-2 text-blue-600 text-sm cursor-pointer">
