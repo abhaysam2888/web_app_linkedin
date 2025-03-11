@@ -42,6 +42,17 @@ export class AuthService {
     }
   }
 
+  async updatePrefs() {
+    try {
+      return await this.account.updatePrefs({
+        profileImage: "",
+        backgroundImage: "",
+      });
+    } catch (error) {
+      console.log(`Appwrite error in updatePrefs || ${error}`);
+    }
+  }
+
   async logout() {
     try {
       return await this.account.deleteSessions();
