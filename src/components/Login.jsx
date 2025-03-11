@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const Login = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [keepLoggedIn, setKeepLoggedIn] = useState(true);
@@ -10,10 +11,17 @@ const Login = () => {
       <div className="top-5 left-5 absolute font-bold text-blue-600 text-2xl sm:text-3xl">
         Linked<span className="bg-blue-600 px-1 text-white">in</span>
       </div>
-      <h1 className="mb-4 font-semibold text-gray-800 text-2xl md:text-3xl text-center dark:text-gray-200">
+      <h1 className="mb-4 font-semibold text-gray-800 dark:text-gray-200 text-2xl md:text-3xl text-center">
         Make the most of your professional life
       </h1>
       <div className="bg-white shadow-lg p-6 md:p-8 rounded-lg w-full max-w-[455px]">
+        <label className="block text-gray-700">Name</label>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="mb-3 p-2 border border-gray-300 rounded w-full dark:placeholder:text-gray-500 dark:text-black"
+        />
         <label className="block text-gray-700">Email or phone number</label>
         <input
           type="email"
@@ -28,6 +36,20 @@ const Login = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className="mb-3 p-2 border border-gray-300 rounded w-full dark:placeholder:text-gray-500 dark:text-black"
+          />
+        </div>
+        <label className="block text-gray-700">Upload your profile</label>
+        <div className="relative">
+          <input
+            type="file"
+            className="mb-3 p-2 border border-gray-300 rounded w-full dark:placeholder:text-gray-500 dark:text-black"
+          />
+        </div>
+        <label className="block text-gray-700">Upload your cover</label>
+        <div className="relative">
+          <input
+            type="file"
             className="mb-3 p-2 border border-gray-300 rounded w-full dark:placeholder:text-gray-500 dark:text-black"
           />
         </div>
@@ -60,7 +82,7 @@ const Login = () => {
           Agree & Join
         </button>
         <div className="my-4 text-gray-500 text-center">or</div>
-        <p className="mt-4 text-center dark:text-gray-700">
+        <p className="mt-4 dark:text-gray-700 text-center">
           Already on LinkedIn?{" "}
           <a href="#" className="font-semibold text-blue-600">
             Sign in

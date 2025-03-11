@@ -7,10 +7,11 @@ const SignUp = () => {
         Linked<span className="bg-blue-600 px-1 text-white">in</span>
       </div>
       <div className="bg-white shadow-lg mt-16 p-6 sm:p-8 rounded-lg w-full max-w-md">
-        <h2 className="mb-4 font-semibold text-xl sm:text-2xl dark:text-gray-700">
+        <h2 className="mb-4 font-semibold dark:text-gray-700 text-xl sm:text-2xl">
           Sign in
         </h2>
         <div className="mb-4">
+          <label className="block text-gray-700">Email or phone</label>
           <input
             type="email"
             placeholder="Email or phone"
@@ -18,9 +19,9 @@ const SignUp = () => {
           />
         </div>
         <div className="relative mb-4">
+          <label className="block text-gray-700">Password</label>
           <input
             type="password"
-            placeholder="Password"
             className="p-3 border border-gray-300 rounded-lg focus:outline-none w-full dark:placeholder:text-gray-500 dark:text-black"
           />
         </div>
