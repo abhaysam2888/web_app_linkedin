@@ -6,11 +6,11 @@ const Login = () => {
   const [keepLoggedIn, setKeepLoggedIn] = useState(true);
 
   return (
-    <div className="flex flex-col justify-center items-center bg-gray-100 px-4 md:px-0 min-h-screen">
+    <div className="flex flex-col justify-center items-center px-4 md:px-0 min-h-screen">
       <div className="top-5 left-5 absolute font-bold text-blue-600 text-2xl sm:text-3xl">
         Linked<span className="bg-blue-600 px-1 text-white">in</span>
       </div>
-      <h1 className="mb-4 font-semibold text-gray-800 text-2xl md:text-3xl text-center">
+      <h1 className="mb-4 font-semibold text-gray-800 text-2xl md:text-3xl text-center dark:text-gray-200">
         Make the most of your professional life
       </h1>
       <div className="bg-white shadow-lg p-6 md:p-8 rounded-lg w-full max-w-[455px]">
@@ -19,7 +19,7 @@ const Login = () => {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="mb-3 p-2 border border-gray-300 rounded w-full"
+          className="mb-3 p-2 border border-gray-300 rounded w-full dark:placeholder:text-gray-500"
         />
 
         <label className="block text-gray-700">Password</label>
@@ -28,7 +28,7 @@ const Login = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="mb-3 p-2 border border-gray-300 rounded w-full"
+            className="mb-3 p-2 border border-gray-300 rounded w-full dark:placeholder:text-gray-500"
           />
         </div>
 
@@ -39,7 +39,7 @@ const Login = () => {
             onChange={() => setKeepLoggedIn(!keepLoggedIn)}
             className="mr-2"
           />
-          <label>Keep me logged in</label>
+          <label className="text-gray-700">Keep me logged in</label>
         </div>
         <p className="text-gray-500 text-sm">
           By clicking Agree & Join or Continue, you agree to the Linkedin
@@ -60,11 +60,7 @@ const Login = () => {
           Agree & Join
         </button>
         <div className="my-4 text-gray-500 text-center">or</div>
-        <button className="flex justify-center items-center mb-2 py-2 border rounded-3xl w-full">
-          <img src="/images/google.png" alt="Google" className="mr-2 w-5 h-5" />
-          Continue with Google
-        </button>
-        <p className="mt-4 text-center">
+        <p className="mt-4 text-center dark:text-gray-700">
           Already on LinkedIn?{" "}
           <a href="#" className="font-semibold text-blue-600">
             Sign in
