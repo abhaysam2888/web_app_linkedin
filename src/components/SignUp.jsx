@@ -6,15 +6,25 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [keepLoggedIn, setKeepLoggedIn] = useState(true);
 
+  const handleAgreeFn = () => {
+    const result = {
+      name: name,
+      email: email,
+      password: password,
+      keepLoggedIn: keepLoggedIn,
+    };
+    console.log(result);
+  };
+
   return (
     <div className="flex flex-col justify-center items-center px-4 md:px-0 min-h-screen">
       <div className="top-5 left-5 absolute font-bold text-blue-600 text-2xl sm:text-3xl">
         Linked<span className="bg-blue-600 px-1 text-white">in</span>
       </div>
-      <h1 className="mb-10 font-semibold text-gray-800 dark:text-gray-200 text-2xl md:text-3xl text-center mt-5">
+      <h1 className="mt-5 mb-10 font-semibold text-gray-800 dark:text-gray-200 text-2xl md:text-3xl text-center">
         Make the most of your professional life
       </h1>
-      <div className="shadow-lg bg-gray-700 p-6 md:p-8 rounded-lg w-full max-w-[455px]">
+      <div className="bg-gray-700 shadow-lg p-6 md:p-8 rounded-lg w-full max-w-[455px]">
         <label className="block text-gray-200">Name</label>
         <input
           type="text"
@@ -78,7 +88,10 @@ const SignUp = () => {
             Cookie Policy.
           </a>
         </p>
-        <button className="bg-blue-600 py-2 rounded-3xl w-full font-semibold text-white">
+        <button
+          onClick={handleAgreeFn}
+          className="bg-blue-600 py-2 rounded-3xl w-full font-semibold text-white"
+        >
           Agree & Join
         </button>
         <div className="my-4 text-gray-500 text-center">or</div>
